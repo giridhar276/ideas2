@@ -1,0 +1,369 @@
+
+python objects
+----------------
+*** Everything in python is Object ***
+*** Every object contains set of methods ****
+
+
+number
+-------
+number can be integer or octal or hexa or decimal
+
+val = 10
+aval = 34543.4
+
+string
+--------
+string is defined in single or double or triple quotes.
+
+string[0:10:2]
+
+list  ( like Array)
+----
+list contains set of elements.
+Elements can be set of numbers or strings or any combination.
+list elements are defined in [].
+list elements are accessed with index 0,1,2...
+
+alist = [10,20,30,40]
+blist = ["unix","scala","hadoop"]
+clist = [10,34.5,"unix","perl",7]
+
+
+tuple  ( immutable  unchangable )
+---------
+tuple contains set of elements.
+Elements can be set of numbers or strings or any combination.
+Tuple elements are defined in ().
+***** Elements inside tuple cannot be modified DIRECTLY ******
+
+atup = (56,4,67,5,54)
+btup = ('c',"java","scala","bigddata")
+ctup = (56.3,65,"unix","linux")
+
+
+
+dictionary  ( hash  , map )
+-----------
+dictionary contains elements in key:value pairs
+dictionary elements are defined in {}
+key is used to uniquely identify the value.
+In general.. keys will be either number or string
+             values can be number or string or list or tuple or dictionary or set
+
+syntax:     object = {key:value , key:value , key:value }
+example:      book = {"chap1":10 ,"chap2":20 ,"chap3":30}
+              nums = {10:20,30:40 ,50:60}
+              data = {"chap1":[10,"UK","Rita"] ,"chap2":[20,"US","Sita"],"chap3":{"UK":"Gita"} }
+
+
+set
+----
+set is UNORDERED collection of UNIQUE elements of SAME TYPE.
+       ---------               -------            -----
+set elements are defined in {}.
+*** Indexing is not allowed in set operations ****
+
+
+aset = {10,10,10,20,30,30}
+aset.add(50)
+
+
+
+classification of objects
+----------------------
+
+mutable objects
+----------------
+list
+dictionary
+set
+
+
+immutable objects
+------------------
+number
+string
+tuple
+
+
+
+
+commenting the code
+-------------------
+
+single line comment ( #)
+---------------------
+
+multi line comment   : lines defined in between ''' and ''' are ignored by interpreter
+---------------------
+
+file handling
+---------------
+working with flat files ( txt csv log conf .properties )
+
+working with third party files (  pdf docx ppt xlsx ... )
+
+
+working with flat files
+--------------------
+read   r
+write  w
+append a
+
+
+open the file
+------------
+
+syntax:     object = open(filename,mode)
+
+example:    fobj= open("customers.txt","r")
+
+
+            fobj= open("customers.txt","w") 
+            case1: If the file is not existing... file gets created
+            case2: If the file is already existing.... it overwrites permanently 
+
+            fobj= open("customers.txt","a")
+            case1: If the file is not existing... file gets created
+            case2: If the file is already existing.... it appends the data to the end of the file
+
+
+fileinput ( library)
+
+
+
+
+1.  fobj = open("customers.txt","r",buffering=10000)
+2.  pandas library
+
+
+
+
+
+
+file read operation
+------------------
+
+- reading line by line
+- reading as a string    ( fobj.read() )
+- reading into list format ( fobj.readlines() )
+- using csv library
+- using pandas library
+
+
+exception handling
+------------------
+
+
+- syntax error
+- semantic error  or runtime error
+
+
+
+handling the errors occurring in the runtime is known as exception handling.
+
+
+try
+except
+else      ( optional)
+finally   ( optional)
+raise     ( used for raising customized exceptions)
+
+
+
+libraries
+-------------
+
+- builtin libraries
+-------------------
+Builtin libraries are installed along with python setup.
+Builtin libraries are generally used by everyone ( file operations , maths operations, numbers,decimals, 
+                                                   OS operations , deleting,creating,list files .... )
+
+In anaconda+spyder , we have almost 8000+ libraries installed with python
+
+
+- third party libraries
+--------------------
+Depending on the requirement(cloud , db ,image processing, ML ,DL,web development, selenium testing ), developer has to install the third party library using pip tool or easy_install tool or downloading manually from www.pypi.org
+
+
+
+importing library
+------------------
+
+import math           ( all the methods will be imported to the program space)
+print(math.tan(2))
+print(math.log(1))
+
+importing required methods ONLY
+---------------------------------
+from math import sin,cos,log     ( importing required methods ONLY )( . operator is not required )
+print(sin(3))
+print(log(2))
+
+accessing with alias name
+-----------------------------
+import math as m
+print(m.log(2))
+print(m.tan(1))
+
+
+
+
+libraries
+--------------
+
+os     : os level operations( create directories | remove | list files | remove file | change file permissions)  
+sys           : system config information
+shutil        : copy, move , rmtree
+urllib.request: working with http
+math          : mathematical operations
+random        : random numbers
+calendar
+smtplib       : sending mails
+ftplib        : ftp'ng the file
+telnetlib     :
+logging       : logging all the events
+shutil        : copy,move,rmtree ....
+filecmp       : comparing directories
+zipfile       : create/extract the zip files
+rarfile       : create/extract the tar files
+tarfile       : create/extract the tarfiles
+getpass       : shadowing the password
+json          : reading/writing json files
+csv           : reading/writing csv files
+xml        
+sysconfig     : system configuration
+collections   : working with dictionaries
+argparse      : passing args from command line
+optparse      : passing args from command line
+time          : working with date and time
+datetime      : working with date and time
+cryptography  : encrypting and decrypting the passwords
+heapq         : performing array operations
+gzip          : reading gunzip files
+re            : validating the strings|patterns
+ipadresss     : validting ip address
+platform      : display platform information
+pathlib       : creating temp files
+threading     : for performing multi threading
+multiprocessing:
+subprocess    : invoking the system commands ( linux or dos commands)
+
+
+
+frequently used third party libraries  ( from pypi.org )
+---------------------------------------
+database related
+----------------
+pymysql   :
+cx_Oracle
+pymongo
+pymssql
+ 
+
+web frameworks ( developing web applications)
+--------------
+django
+flask
+bottom
+
+ruby on rails
+
+
+analytics/machine learning
+---------------------------
+numpy
+scipy
+pandas ( processing|data cleaning)
+seaborn
+plotly
+ggplot
+matplotlib   : visualizing data .. bar graph.. pie graph
+scikit-learn :  machine learning algorithms
+
+image processing
+---------------
+pillow
+opencv
+
+APIs ( REST API)
+-----
+requests
+
+
+
+excel programming
+------------------
+openpyxl    : reading/write excel files
+xlsxwriter  : writing to excel file
+python-docx : working with ms-word
+
+networking
+-----------
+paramiko   :  interacting with remote servers
+netmiko    :  connecting to router/switch
+pysftp     :
+ftplib     :
+pyping     :  ping any host or ip address
+os.system():
+subprocess.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
